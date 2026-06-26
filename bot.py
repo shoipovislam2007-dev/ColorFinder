@@ -17,8 +17,6 @@ from aiogram.fsm.storage.memory import MemoryStorage
 # ===== НАСТРОЙКИ =====
 # ============================================
 
-BOT_TOKEN = "8957792151:AAGox2cCtmSaylijWd5IGHQzOyoX9lhNymA"
-ADMIN_ID = 7921694564# Твой Telegram ID
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = int(os.getenv("ADMIN_ID", 123456789))
 # ============================================
