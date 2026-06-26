@@ -374,13 +374,20 @@ def create_palette_image(colors: list):
     img = Image.new('RGB', (img_width, total_height), '#000000')
     draw = ImageDraw.Draw(img)
     
+    # Используем встроенный шрифт, но увеличиваем его размер
     try:
+        # Пытаемся загрузить системный шрифт (для красоты)
         font = ImageFont.truetype("arial.ttf", font_size)
     except:
+        # Если его нет — используем встроенный, но увеличиваем его в 3 раза
+        font = ImageFont.load_default()
+        # Создаём новый объект шрифта с увеличенным размером
+        import PIL.ImageFont
         try:
-            font = ImageFont.truetype("arialbd.ttf", font_size)
+            font = PIL.ImageFont.truetype("DejaVuSans.ttf", font_size)
         except:
-            font = ImageFont.load_default()
+            # Если и DejaVu нет — просто используем стандартный с увеличением
+            font = ImageFont.load_default().font_variant(size=font_size)
     
     for idx, hex_color in enumerate(colors):
         y = idx * rect_height
