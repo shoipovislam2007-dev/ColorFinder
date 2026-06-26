@@ -635,10 +635,10 @@ async def cmd_referral(message: Message):
 @dp.message(Command("buy"))
 async def cmd_buy(message: Message):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🔥 85 ⭐ → 10 токенов (-15%)", callback_data="buy_10")],
-        [InlineKeyboardButton(text="🔥 212 ⭐ → 25 токенов (-15%)", callback_data="buy_25")],
-        [InlineKeyboardButton(text="🔥 425 ⭐ → 50 токенов (-15%)", callback_data="buy_50")],
-        [InlineKeyboardButton(text="🔥 850 ⭐ → 100 токенов (-15%)", callback_data="buy_100")],
+        [InlineKeyboardButton(text="🔥 50 ⭐ → 10 токенов (-15%)", callback_data="buy_10")],
+        [InlineKeyboardButton(text="🔥 100 ⭐ → 25 токенов (-15%)", callback_data="buy_25")],
+        [InlineKeyboardButton(text="🔥 200 ⭐ → 55 токенов (-15%)", callback_data="buy_50")],
+        [InlineKeyboardButton(text="🔥 400 ⭐ → 110 токенов (-15%)", callback_data="buy_100")],
         [InlineKeyboardButton(text="❓ Помощь", callback_data="help")]
     ])
     
